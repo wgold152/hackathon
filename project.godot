@@ -12,12 +12,18 @@ config_version=5
 
 config/name="Revitalizing_Room"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sprites/icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="Revitalizing_Room"
 
 [physics]
 

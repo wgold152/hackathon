@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://qdk45hyj086r"]
+
+[sub_resource type="Theme" id="Theme_vaio1"]
+
+[node name="FurnitureMenu" type="PanelContainer" unique_id=1178480869]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 144.0
+grow_vertical = 2
+theme = SubResource("Theme_vaio1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1739836271]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=429825170]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1275971599]
+layout_mode = 2
+theme_override_constants/separation = 4
