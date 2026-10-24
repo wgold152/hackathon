@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://rl188j0m1xm8"]
+
+[ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_mj43k"]
+[ext_resource type="Texture2D" uid="uid://bnq8x3x4q5xrw" path="res://sprites/wooden_bed.png" id="2_pvn1b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
+size = Vector2(145, 100)
+
+[node name="WoodenBed" type="Area2D" unique_id=395229060]
+script = ExtResource("1_mj43k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=279698579]
+texture = ExtResource("2_pvn1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666651186]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_hk511")

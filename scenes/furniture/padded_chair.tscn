@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bxjxfpd1j14pm"]
+
+[ext_resource type="Texture2D" uid="uid://dlsxwef44ue40" path="res://sprites/padded_chair.png" id="1_lejqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
+size = Vector2(100, 145)
+
+[node name="PaddedChair" type="Area2D" unique_id=2031021918]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1170248780]
+texture = ExtResource("1_lejqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1089814165]
+position = Vector2(5, 0)
+shape = SubResource("RectangleShape2D_hk511")

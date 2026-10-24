@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jvm0ina10wn1"]
+
+[ext_resource type="Texture2D" uid="uid://ce152ilocjqqf" path="res://sprites/wooden_table.png" id="1_lgt2r"]
+[ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_yd8dh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
+size = Vector2(145, 85)
+
+[node name="WoodenTable" type="Area2D" unique_id=1990066293]
+script = ExtResource("1_yd8dh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1323703010]
+texture = ExtResource("1_lgt2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2059407678]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_hk511")
