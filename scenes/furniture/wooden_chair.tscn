@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntio1"]
 size = Vector2(85, 145)
 
-[node name="Chair" type="Area2D" unique_id=1491436941]
+[node name="WoodenChair" type="Area2D" unique_id=1491436941]
 script = ExtResource("1_b53fd")
 
 [node name="WoodenChair" type="Sprite2D" parent="." unique_id=1736649351]

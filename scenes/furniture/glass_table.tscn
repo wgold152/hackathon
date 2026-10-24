@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cik48k8dcq884"]
+
+[ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_mhli4"]
+[ext_resource type="Texture2D" uid="uid://bvjxpvetp2gei" path="res://sprites/glass_table.png" id="2_2bo16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
+size = Vector2(145, 120)
+
+[node name="GlassTable" type="Area2D" unique_id=1121474194]
+script = ExtResource("1_mhli4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=940353369]
+texture = ExtResource("2_2bo16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=482136790]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_hk511")
