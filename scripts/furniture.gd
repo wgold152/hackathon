@@ -11,6 +11,8 @@ func _ready() -> void:
 func drag(_viewport, event : InputEvent, _idx) -> void:
 	if (event is InputEventMouseButton):
 		dragging = event.pressed
+		if (!event.pressed and has_node("AudioStreamPlayer2D")):
+			get_node("AudioStreamPlayer2D").play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
