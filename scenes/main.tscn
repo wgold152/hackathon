@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://c1cxlrsl4brn2"]
+[gd_scene format=3 uid="uid://cwi73dse6xird"]
 
 [ext_resource type="Texture2D" uid="uid://b04exqwwlvqij" path="res://sprites/background.png" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://j56v83ic8207" path="res://sprites/furniture_windows.png" id="2_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cf48ckbq07wpb" path="res://sprites/room_window.png" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://b3qwexkr7jw31" path="res://scenes/furniture/chair.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bvttqji7eh20o" path="res://scenes/furniture/bed.tscn" id="4_tefeu"]
 
 [node name="main" type="Node" unique_id=1407008599]
 
@@ -20,3 +22,9 @@ texture = ExtResource("2_jyhfs")
 [node name="RoomWindow" type="Sprite2D" parent="." unique_id=606757562]
 position = Vector2(960, 540)
 texture = ExtResource("3_tbgi4")
+
+[node name="Bed" parent="." unique_id=851722151 instance=ExtResource("4_tefeu")]
+position = Vector2(649, 785)
+
+[node name="Chair" parent="." unique_id=1491436941 instance=ExtResource("4_tbgi4")]
+position = Vector2(869, 797)

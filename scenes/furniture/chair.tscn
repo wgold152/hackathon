@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b3qwexkr7jw31"]
+
+[ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_b53fd"]
+[ext_resource type="Texture2D" uid="uid://bckyvh150mpe1" path="res://sprites/wooden_chair.png" id="2_w3pvj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntio1"]
+size = Vector2(85, 145)
+
+[node name="Chair" type="Area2D" unique_id=1491436941]
+script = ExtResource("1_b53fd")
+
+[node name="WoodenChair" type="Sprite2D" parent="." unique_id=1736649351]
+texture = ExtResource("2_w3pvj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=826257883]
+shape = SubResource("RectangleShape2D_ntio1")
