@@ -29,8 +29,9 @@ func drag(_viewport, event : InputEvent, _idx) -> void:
 			else:
 				last_position = position
 				if !placed:
-					Inventory.AddFurniture(self)
 					Inventory.instances.remove_at(Inventory.instances.find(self))
+					Inventory.AddFurniture(self)
+					
 					placed = true
 				if (has_node("AudioStreamPlayer2D")):
 					get_node("AudioStreamPlayer2D").play()
