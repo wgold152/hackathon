@@ -8,7 +8,7 @@ static var furnitureStore = []
 
 var path = 'res://scenes/furniture/'
 
-func dir_contents(path):
+func DirContents(path):
 	var dir = DirAccess.open(path)
 	if dir:
 		dir.list_dir_begin()
@@ -39,6 +39,7 @@ static func PopulateInventory():
 		if not inventory.has(temp):
 			inventory[i] = temp
 			i = i + 1
+			print(str(temp) + "Added to inventory")
 
 static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
@@ -50,3 +51,17 @@ static func PaintRoom(section, paint):
 
 static func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))
+	
+func _ready() -> void:
+	DirContents(path)
+	PopulateInventory()
+	print(inventory)
+	InstantiateItems(inventory)
+	print(furnitureStore)
+	
+func InstantiateItems(inventory):
+	print(inventory)
+	for x in inventory:
+		print(x)
+		var instance = x.instantiate()
+		add_child(instance)
