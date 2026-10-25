@@ -38,11 +38,12 @@ static func PopulateInventory():
 		#prevents duplicate furniture
 		if not inventory.has(temp):
 			inventory[i] = temp
-			i + 1
+			i = i + 1
 
 static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
-	Turns.IncrementTurn()
+	print(furnishings)
+	Turns.IncrementAction()
 
 static func PaintRoom(section, paint):
 	Turns.IncrementTurn()
