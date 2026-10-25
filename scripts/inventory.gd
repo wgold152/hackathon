@@ -1,4 +1,4 @@
-extends Node
+extends Game
 
 class_name Inventory
 
@@ -27,9 +27,10 @@ func PopulateInventory():
 
 func AddFurniture(furnishing):
 	furnishings.append(furnishing)
+	Turns.action + 1
 
-#func PaintRoom(section, paint):
-	
+func PaintRoom(section, paint):
+	Turns.action + 1
 
 func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))

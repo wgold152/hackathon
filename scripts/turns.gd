@@ -2,7 +2,7 @@ extends Inventory
 
 class_name Turns
 
-var ROUNDS = 4 #seasons
+var MAX_ROUNDS = 1 #seasons
 var MAX_TURNS = 3
 
 var MAX_ACTIONS = 3
@@ -16,6 +16,9 @@ static var action = 0
 func IncrementTurn():
 			curTurn + 1
 			PopulateInventory()
-	
-func IncrementRound():
-	if curTurn == MAX_TURNS: curRound + 1
+			
+			if curTurn == MAX_TURNS:
+				curRound + 1
+				
+				if curRound == MAX_ROUNDS: Reset()
+			
