@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Revitalizing_Room"
-run/main_scene="uid://cwi73dse6xird"
+run/main_scene="uid://cpqvh1xbe64e4"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://sprites/icon.svg"
 
 PlayerControls="*uid://12wi1im6fs8w"
 MusicPlayer="*uid://b2ydac6amwd64"
+FurnitureFromDir="*uid://cw7oo8qemsvlh"
 Inventory="*uid://b0ujr3mu7sim3"
 
 [display]
