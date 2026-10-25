@@ -13,7 +13,9 @@ var placed := false
 func _ready() -> void:
 	input_event.connect(drag)
 	call_deferred("set_last_position")
-	floorArea = get_tree().get_first_node_in_group("Floor Area")
+	floorArea = get_node(".")
+	print("this node is")
+	print(floorArea)
 	ground = get_node("Ground")
 
 func set_last_position():
