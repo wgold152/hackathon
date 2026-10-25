@@ -1,11 +1,26 @@
 [gd_scene format=3 uid="uid://csvwsch73cfpb"]
 
+[ext_resource type="Texture2D" uid="uid://dx2xwifqo3jg7" path="res://sprites/hand_vaccum.png" id="1_n263d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n263d"]
+size = Vector2(91, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guyvn"]
+size = Vector2(90, 12)
+
 [node name="Vacuum" type="Area2D" unique_id=1985858600]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=179590335]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=922806952]
+texture = ExtResource("1_n263d")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1620696350]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=663178300]
+position = Vector2(1.5, 9)
+shape = SubResource("RectangleShape2D_n263d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1725746524]
+[node name="Ground" type="Area2D" parent="." unique_id=1620696350]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=994496441]
+position = Vector2(3, 63)
+shape = SubResource("RectangleShape2D_guyvn")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1130702174]
