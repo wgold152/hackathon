@@ -2,8 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dryq4sccjy55t" path="res://scripts/menu_control.gd" id="1_yqeox"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
+bg_color = Color(0.32321247, 0.32321253, 0.32321236, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_right = 4.0
+
 [sub_resource type="Gradient" id="Gradient_4h3mk"]
-colors = PackedColorArray(0.88235295, 0.6862745, 0.2627451, 1, 0.8464959, 0.9252249, 0.980679, 0.36078432)
+colors = PackedColorArray(0.88235295, 0.6862745, 0.2627451, 1, 0.4987734, 0.5938157, 0.6172199, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_x3h5n"]
 gradient = SubResource("Gradient_4h3mk")
@@ -14,6 +22,7 @@ fill_to = Vector2(0.69140625, 0.6953125)
 texture = SubResource("GradientTexture2D_x3h5n")
 
 [sub_resource type="Theme" id="Theme_upa4g"]
+Button/styles/normal = SubResource("StyleBoxFlat_yqeox")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_kiatt")
 
 [sub_resource type="Theme" id="Theme_l1n4c"]
@@ -23,16 +32,9 @@ font_size = 150
 outline_size = 30
 outline_color = Color(0.02, 0.02, 0.02, 1)
 
-[node name="Control" type="Control" unique_id=448940960]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Menu" type="Node" unique_id=1129570830 groups=["Main Menu"]]
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=2142328545]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -43,6 +45,7 @@ theme = SubResource("Theme_upa4g")
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1297116999]
 layout_mode = 2
 theme = SubResource("Theme_l1n4c")
+theme_override_constants/separation = 32
 script = ExtResource("1_yqeox")
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=3974639]
@@ -58,11 +61,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 100
-text = "Start room"
+text = "PLAY"
 
 [node name="Button2" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1353598368]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 2
 theme_override_font_sizes/font_size = 75
-text = "Exit room"
+text = "QUIT"

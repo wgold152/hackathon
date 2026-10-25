@@ -71,7 +71,7 @@ static func AddFurniture(furnishing):
 static func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))
 	
-#func _ready() -> void:
-	#DirContents(path)
-	#inv = PopulateInventory()
-	#InstantiateItems(inv)
+func _ready() -> void:
+	DirContents(path)
+	inv = PopulateInventory()
+	InstantiateItems(inv)
