@@ -19,7 +19,7 @@ config/icon="res://sprites/icon.svg"
 
 PlayerControls="*uid://12wi1im6fs8w"
 MusicPlayer="*uid://b2ydac6amwd64"
-FurnitureFromDir="*uid://cw7oo8qemsvlh"
+Inventory="*uid://b0ujr3mu7sim3"
 
 [display]
 

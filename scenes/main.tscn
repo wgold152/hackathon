@@ -4,13 +4,10 @@
 [ext_resource type="Script" uid="uid://dtq686xc4nugn" path="res://scripts/turns.gd" id="1_tefeu"]
 [ext_resource type="Texture2D" uid="uid://j56v83ic8207" path="res://sprites/furniture_windows.png" id="2_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cf48ckbq07wpb" path="res://sprites/room_window.png" id="3_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://b3qwexkr7jw31" path="res://scenes/furniture/wooden_chair.tscn" id="4_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://bxqc5hvmhings" path="res://scenes/furniture/toilet.tscn" id="4_tefeu"]
 [ext_resource type="Texture2D" uid="uid://ckp2b5metv0so" path="res://sprites/floor.png" id="5_choun"]
 [ext_resource type="Texture2D" uid="uid://s23egfx3fwvx" path="res://sprites/roof.png" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://cievb5rel8a6" path="res://sprites/wall_creases.png" id="7_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://irnhr6aogit0" path="res://sprites/trim.png" id="8_trceg"]
-[ext_resource type="PackedScene" uid="uid://cik48k8dcq884" path="res://scenes/furniture/glass_table.tscn" id="11_ya4ey"]
 
 [node name="main" type="Node" unique_id=1407008599]
 script = ExtResource("1_tefeu")
@@ -24,6 +21,7 @@ position = Vector2(960, 540)
 texture = ExtResource("1_sugp2")
 
 [node name="FurnitureWindows" type="Sprite2D" parent="." unique_id=1666163737]
+z_index = -1
 position = Vector2(960, 540)
 texture = ExtResource("2_jyhfs")
 
@@ -46,12 +44,6 @@ texture = ExtResource("7_eb6dy")
 [node name="Trim" type="Sprite2D" parent="RoomWindow" unique_id=615806724]
 texture = ExtResource("8_trceg")
 
-[node name="Toilet" parent="." unique_id=851722151 instance=ExtResource("4_tefeu")]
-position = Vector2(649, 785)
-
-[node name="Chair" parent="." unique_id=1491436941 instance=ExtResource("4_tbgi4")]
-position = Vector2(869, 797)
-
 [node name="RoomArea" type="Area2D" parent="." unique_id=1202059844 groups=["Room Area"]]
 position = Vector2(960, 540)
 
@@ -69,6 +61,3 @@ polygon = PackedVector2Array(-251, -9, -251, -5.799988, -439.59998, 119, -448.6,
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoofArea" unique_id=900456277]
 position = Vector2(960, 540)
 polygon = PackedVector2Array(-411, -463, -411, -460.8, -423.7, -457, -429.5, -457, -440, -442.6, -440, -437.2, -252, -321.2, -252, -318, 269, -317, 271.40002, -317, 467.40002, -435, 470.5, -435, 472.90002, -441.6, 459, -453.3, 459, -456, 437, -461.1, 437, -463)
-
-[node name="GlassTable" parent="." unique_id=1121474194 instance=ExtResource("11_ya4ey")]
-position = Vector2(1284, 782)
