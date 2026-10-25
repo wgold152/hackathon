@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_mj43k"]
 [ext_resource type="Texture2D" uid="uid://bnq8x3x4q5xrw" path="res://sprites/wooden_bed.png" id="2_pvn1b"]
+[ext_resource type="AudioStream" uid="uid://drafj415myjpe" path="res://audio/sound_effects/Blanket Sound Effect.mp3" id="3_pvn1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(145, 100)
@@ -25,3 +26,6 @@ shape = SubResource("RectangleShape2D_hk511")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1014479364]
 position = Vector2(1, 45)
 shape = SubResource("RectangleShape2D_mj43k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2090832382]
+stream = ExtResource("3_pvn1b")

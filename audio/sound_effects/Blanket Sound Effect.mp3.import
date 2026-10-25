@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drafj415myjpe"
+path="res://.godot/imported/Blanket Sound Effect.mp3-05f91bc5b9b0933df9f0f17e783ba0e5.mp3str"
+
+[deps]
+
+source_file="res://audio/sound_effects/Blanket Sound Effect.mp3"
+dest_files=["res://.godot/imported/Blanket Sound Effect.mp3-05f91bc5b9b0933df9f0f17e783ba0e5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

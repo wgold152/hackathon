@@ -68,9 +68,6 @@ static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
 	Turns.IncrementAction()
 
-static func PaintRoom(section, paint):
-	Turns.IncrementAction()
-
 static func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))
 	
