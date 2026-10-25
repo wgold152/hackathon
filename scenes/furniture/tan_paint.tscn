@@ -11,6 +11,7 @@ script = ExtResource("1_h2nyj")
 colour = Color(1, 0.93333334, 0.81960785, 1)
 
 [node name="PaintTan" type="Sprite2D" parent="." unique_id=422968048]
+y_sort_enabled = true
 texture = ExtResource("2_xdopy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1581980537]

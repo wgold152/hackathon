@@ -13,12 +13,15 @@ static var curTurn = 0
 static var action = 0
 
 static func IncrementAction():
-	action + 1
+	action = action + 1
+	print(action)
 	if action == MAX_ACTIONS: IncrementTurn()
 
 static func IncrementTurn():
-			curTurn + 1
+			curTurn = curTurn + 1
 			PopulateInventory()
+			print(curTurn)
 			
 			if curTurn == MAX_TURNS:
-				curRound + 1
+				curRound = curRound + 1
+				print(curRound)
