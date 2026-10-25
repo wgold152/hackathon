@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btij7wyetisom"]
 
-[ext_resource type="Texture2D" uid="uid://b48hnafc3h1me" path="res://sprites/trashcan.png" id="1_avkd5"]
+[ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_ncdeo"]
+[ext_resource type="Texture2D" uid="uid://b48hnafc3h1me" path="res://sprites/trashcan.png" id="2_mj6ct"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxwvi"]
 size = Vector2(92, 122)
@@ -8,10 +9,11 @@ size = Vector2(92, 122)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4bll"]
 size = Vector2(90, 12)
 
-[node name="Node2D" type="Area2D" unique_id=28082935]
+[node name="Trashcan" type="Area2D" unique_id=28082935]
+script = ExtResource("1_ncdeo")
 
 [node name="Trashcan" type="Sprite2D" parent="." unique_id=1754880756]
-texture = ExtResource("1_avkd5")
+texture = ExtResource("2_mj6ct")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=660924989]
 position = Vector2(3, 3)

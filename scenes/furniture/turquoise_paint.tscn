@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b6nk1jkikg345"]
+
+[ext_resource type="Script" uid="uid://uran1ujq2i3i" path="res://scripts/paint_can.gd" id="1_4rorv"]
+[ext_resource type="Texture2D" uid="uid://cqbyhrati58d3" path="res://sprites/paint_turquoise.png" id="2_ilqaw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxwvi"]
+size = Vector2(87, 117)
+
+[node name="Turquoise paint" type="Area2D" unique_id=1944918410]
+script = ExtResource("1_4rorv")
+colour = Color(0.83137256, 1, 1, 1)
+
+[node name="PaintTurquoise" type="Sprite2D" parent="." unique_id=1442118378]
+texture = ExtResource("2_ilqaw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1764163099]
+position = Vector2(4.5, 7.5)
+shape = SubResource("RectangleShape2D_gxwvi")

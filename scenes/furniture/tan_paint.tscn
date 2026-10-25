@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bkwk4ulyd3kav"]
+
+[ext_resource type="Script" uid="uid://uran1ujq2i3i" path="res://scripts/paint_can.gd" id="1_h2nyj"]
+[ext_resource type="Texture2D" uid="uid://cx42mt8684cs8" path="res://sprites/paint_tan.png" id="2_xdopy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxwvi"]
+size = Vector2(91, 108)
+
+[node name="Tan paint" type="Area2D" unique_id=1998509015]
+script = ExtResource("1_h2nyj")
+colour = Color(1, 0.93333334, 0.81960785, 1)
+
+[node name="PaintTan" type="Sprite2D" parent="." unique_id=422968048]
+texture = ExtResource("2_xdopy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1581980537]
+position = Vector2(1.5, 9)
+shape = SubResource("RectangleShape2D_gxwvi")
