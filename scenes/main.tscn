@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c1cxlrsl4brn2"]
+[gd_scene format=3 uid="uid://cwi73dse6xird"]
 
 [ext_resource type="Texture2D" uid="uid://b04exqwwlvqij" path="res://sprites/background.png" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://dtq686xc4nugn" path="res://scripts/turns.gd" id="1_tefeu"]
@@ -18,6 +18,7 @@ script = ExtResource("1_tefeu")
 anchor_mode = 0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=272399815]
+z_index = -10
 position = Vector2(960, 540)
 texture = ExtResource("1_sugp2")
 
@@ -26,6 +27,7 @@ position = Vector2(960, 540)
 texture = ExtResource("2_jyhfs")
 
 [node name="RoomWindow" type="Sprite2D" parent="." unique_id=606757562]
+z_index = -9
 position = Vector2(960, 540)
 texture = ExtResource("3_tbgi4")
 
@@ -37,6 +39,7 @@ texture = ExtResource("5_choun")
 texture = ExtResource("6_ya4ey")
 
 [node name="WallCreases" type="Sprite2D" parent="RoomWindow" unique_id=1368803552]
+z_index = 1
 texture = ExtResource("7_eb6dy")
 
 [node name="Trim" type="Sprite2D" parent="RoomWindow" unique_id=615806724]
@@ -47,3 +50,21 @@ position = Vector2(649, 785)
 
 [node name="Chair" parent="." unique_id=1491436941 instance=ExtResource("4_tbgi4")]
 position = Vector2(869, 797)
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=1202059844 groups=["Room Area"]]
+position = Vector2(960, 540)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomArea" unique_id=103310841]
+polygon = PackedVector2Array(-412, -459, -412, -457.5, -427.40002, -452, -430.90002, -452, -435.90002, -446, -439, -446, -448, -433, -449.6, -433, -451.7, -423, -453, -423, -453, 111.400024, -450, 119.400024, -450, 122.900024, -432, 139.90002, -432, 141.40002, -411.40002, 149, 438.40002, 149, 454.30005, 142, 456.80005, 142, 462.80005, 136, 465, 136, 473, 126, 474.59998, 126, 477.5, 113, 479, 113, 479, -421.4, 473, -435.4, 473, -438, 457, -451.1, 457, -452.5, 439, -457.5, 439, -459)
+
+[node name="FloorArea" type="Area2D" parent="." unique_id=771828918 groups=["Floor Area"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FloorArea" unique_id=674916122]
+position = Vector2(960, 540)
+polygon = PackedVector2Array(-251, -9, -251, -5.799988, -439.59998, 119, -448.6, 119, -437, 139.20001, -437, 142.59998, -416, 149.5, -416, 151.29999, -404.40002, 153, 433.19995, 153, 469.19995, 134, 472.69995, 134, 474.90002, 126.900024, 276, -5.799988, 276, -9)
+
+[node name="RoofArea" type="Area2D" parent="." unique_id=816118053 groups=["Roof Area"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoofArea" unique_id=900456277]
+position = Vector2(960, 540)
+polygon = PackedVector2Array(-411, -463, -411, -460.8, -423.7, -457, -429.5, -457, -440, -442.6, -440, -437.2, -252, -321.2, -252, -318, 269, -317, 271.40002, -317, 467.40002, -435, 470.5, -435, 472.90002, -441.6, 459, -453.3, 459, -456, 437, -461.1, 437, -463)

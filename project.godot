@@ -32,6 +32,12 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Revitalizing_Room"
 
+[global_group]
+
+"Room Area"="Area we can place objects"
+"Floor Area"="The floor"
+"Roof Area"="Roof"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
