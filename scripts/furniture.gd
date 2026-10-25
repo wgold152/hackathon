@@ -10,6 +10,7 @@ var ground : Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	input_event.connect(drag)
+	set_deferred("last_position", call_deferred("get_transform"))
 	last_position = position
 	floorArea = get_tree().get_first_node_in_group("Floor Area")
 	ground = get_node("Ground")
