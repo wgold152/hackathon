@@ -1,8 +1,9 @@
 extends Node
 
 static var furnishings = []
-static var inventory = []
 static var furnitureStore = []
+static var inv = []
+static var instances = []
 
 var path = 'res://scenes/furniture/'
 
@@ -22,9 +23,10 @@ func DirContents(path):
 	else:
 		print("An error occurred when trying to access the path.")
 
-static func PopulateInventory():
+static func PopulateInventory() -> Array:
 	var temp
 	var i = 0
+	var inventory = []
 	
 	#reset inventory
 	inventory.clear()
@@ -38,6 +40,8 @@ static func PopulateInventory():
 			inventory[i] = temp
 			i = i + 1
 			print(str(temp) + "Added to inventory")
+			
+	return inventory
 
 func InstantiateItems(inventory):
 	var xincrement = 211
@@ -56,6 +60,7 @@ func InstantiateItems(inventory):
 	for x in inventory:
 		var instance = x.instantiate()
 		add_child(instance)
+		instances.append(instance)
 		instance.position = inventoryVectors[count]
 		count = count + 1
 
@@ -64,12 +69,12 @@ static func AddFurniture(furnishing):
 	Turns.IncrementAction()
 
 static func PaintRoom(section, paint):
-	Turns.IncrementTurn()
+	Turns.IncrementAction()
 
 static func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))
 	
 func _ready() -> void:
 	DirContents(path)
-	PopulateInventory()
-	InstantiateItems(inventory)
+	inv = PopulateInventory()
+	InstantiateItems(inv)
