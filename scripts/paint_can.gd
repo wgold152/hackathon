@@ -12,6 +12,10 @@ func _ready() -> void:
 	roomArea = get_tree().get_first_node_in_group("Room Area")
 	roofArea = get_tree().get_first_node_in_group("Roof Area")
 	roomWindow = get_tree().get_first_node_in_group("Room Window")
+	call_deferred("set_last_position")
+	
+func set_last_position():
+	last_position = position
 
 
 func drag(_viewport, event : InputEvent, _idx) -> void:
