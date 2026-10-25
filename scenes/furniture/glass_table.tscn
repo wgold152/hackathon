@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_mhli4"]
 [ext_resource type="Texture2D" uid="uid://bvjxpvetp2gei" path="res://sprites/glass_table.png" id="2_2bo16"]
+[ext_resource type="AudioStream" uid="uid://cictpmxhw51ax" path="res://audio/sound_effects/Glass table.mp3" id="3_2bo16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(145, 120)
@@ -15,3 +16,6 @@ texture = ExtResource("2_2bo16")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=482136790]
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_hk511")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1362693559]
+stream = ExtResource("3_2bo16")
