@@ -8,7 +8,6 @@ static var furnitureStore = []
 
 var path = 'res://scenes/furniture/'
 
-func dir_contents(path):
 func DirContents(path):
 	var dir = DirAccess.open(path)
 	if dir:
