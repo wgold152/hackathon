@@ -4,7 +4,6 @@ class_name Turns
 
 static var MAX_ROUNDS = 1 #seasons
 static var MAX_TURNS = 3
-
 static var MAX_ACTIONS = 3
 
 #initial counters
@@ -20,7 +19,8 @@ static func IncrementAction():
 static func IncrementTurn():
 			curTurn = curTurn + 1
 			for x in Inventory.instances:
-				x.queue_free()
+				if x != null:
+					x.queue_free()
 			Inventory.InstantiateItems(Inventory.PopulateInventory())
 			print(curTurn)
 			
