@@ -41,6 +41,13 @@ static func PopulateInventory():
 			i = i + 1
 			print(str(temp) + "Added to inventory")
 
+func InstantiateItems(inventory):
+	print(inventory)
+	for x in inventory:
+		print(x)
+		var instance = x.instantiate()
+		add_child(instance)
+
 static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
 	print(furnishings)
@@ -58,10 +65,3 @@ func _ready() -> void:
 	print(inventory)
 	InstantiateItems(inventory)
 	print(furnitureStore)
-	
-func InstantiateItems(inventory):
-	print(inventory)
-	for x in inventory:
-		print(x)
-		var instance = x.instantiate()
-		add_child(instance)

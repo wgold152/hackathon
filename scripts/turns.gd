@@ -1,4 +1,4 @@
-extends Inventory
+extends Node
 
 class_name Turns
 
@@ -19,7 +19,7 @@ static func IncrementAction():
 
 static func IncrementTurn():
 			curTurn = curTurn + 1
-			PopulateInventory()
+			Inventory.PopulateInventory()
 			print(curTurn)
 			
 			if curTurn == MAX_TURNS:

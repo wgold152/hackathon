@@ -11,6 +11,7 @@ script = ExtResource("1_nroxq")
 colour = Color(0.68235296, 0.7176471, 1, 1)
 
 [node name="PaintCornflower" type="Sprite2D" parent="." unique_id=1211907630]
+y_sort_enabled = true
 texture = ExtResource("2_ojvcn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=455055259]
