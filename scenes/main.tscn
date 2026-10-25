@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b04exqwwlvqij" path="res://sprites/background.png" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://dtq686xc4nugn" path="res://scripts/turns.gd" id="1_tefeu"]
+[ext_resource type="Script" uid="uid://cw7oo8qemsvlh" path="res://scripts/furniture_from_dir.gd" id="2_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://j56v83ic8207" path="res://sprites/furniture_windows.png" id="2_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cf48ckbq07wpb" path="res://sprites/room_window.png" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b3qwexkr7jw31" path="res://scenes/furniture/wooden_chair.tscn" id="4_tbgi4"]
@@ -14,6 +15,9 @@
 
 [node name="main" type="Node" unique_id=1407008599]
 script = ExtResource("1_tefeu")
+
+[node name="Node" type="Node" parent="." unique_id=525781966]
+script = ExtResource("2_eb6dy")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=307183013]
 anchor_mode = 0
