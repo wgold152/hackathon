@@ -14,6 +14,7 @@ size = Vector2(52, 20)
 script = ExtResource("1_88oj2")
 
 [node name="Redbull" type="Sprite2D" parent="." unique_id=82093471]
+y_sort_enabled = true
 texture = ExtResource("2_diwv8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538550631]

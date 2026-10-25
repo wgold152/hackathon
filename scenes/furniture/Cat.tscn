@@ -11,6 +11,7 @@ size = Vector2(62, 119)
 size = Vector2(60, 20)
 
 [node name="Cat" type="Area2D" unique_id=240485946]
+y_sort_enabled = true
 script = ExtResource("1_hwfu5")
 
 [node name="Cat" type="Sprite2D" parent="." unique_id=1999298906]
