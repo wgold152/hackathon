@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://csvwsch73cfpb"]
+
+[node name="Vacuum" type="Area2D" unique_id=1985858600]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=179590335]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1620696350]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1725746524]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1130702174]
