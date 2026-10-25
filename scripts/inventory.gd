@@ -3,7 +3,7 @@ extends Node
 class_name Inventory
 
 var furnishings = []
-var inventory = [0, 1, 2, 3, 4, 5, 6, 7]
+var inventory = []
 var furnitureStore = []
 
 func StockStore(stock):
@@ -13,6 +13,10 @@ func PopulateInventory():
 	var temp
 	var i = 0
 	
+	#reset inventory
+	inventory.clear()
+	inventory.resize(8)
+	
 	while i < 8:
 		temp = furnitureStore.pick_random()
 		
@@ -21,8 +25,11 @@ func PopulateInventory():
 			inventory[i] = temp
 			i + 1
 
-func PlaceFurniture(furnishing):
+func AddFurniture(furnishing):
 	furnishings.append(furnishing)
+
+#func PaintRoom(section, paint):
+	
 
 func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))
