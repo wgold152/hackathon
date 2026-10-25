@@ -51,7 +51,7 @@ script = ExtResource("1_yqeox")
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=3974639]
 layout_mode = 2
 size_flags_vertical = 10
-text = "Room"
+text = "Revitalizing Room"
 label_settings = SubResource("LabelSettings_4r8jj")
 horizontal_alignment = 1
 vertical_alignment = 2
