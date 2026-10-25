@@ -54,16 +54,13 @@ func InstantiateItems(inventory):
 						Vector2(basePositionx+(3*xincrement), basePositiony+yincrement)]
 	var count = 0
 	for x in inventory:
-		print(x)
 		var instance = x.instantiate()
 		add_child(instance)
-		print(inventoryVectors[count])
 		instance.position = inventoryVectors[count]
 		count = count + 1
 
 static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
-	print(furnishings)
 	Turns.IncrementAction()
 
 static func PaintRoom(section, paint):
@@ -75,7 +72,4 @@ static func RemoveFurniture(furnishing):
 func _ready() -> void:
 	DirContents(path)
 	PopulateInventory()
-	print(inventory)
-	print("WAHHHH")
 	InstantiateItems(inventory)
-	print(furnitureStore)
