@@ -13,8 +13,11 @@ static var action = 0
 
 static func IncrementAction():
 	action = action + 1
-	print("action: " + str(action))
-	if action == MAX_ACTIONS: IncrementTurn()
+
+	print(action)
+	if action == MAX_ACTIONS:
+		IncrementTurn()
+		action = 0
 
 static func IncrementTurn():
 			curTurn = curTurn + 1

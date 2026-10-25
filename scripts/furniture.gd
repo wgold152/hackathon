@@ -7,6 +7,8 @@ var last_position : Vector2
 var floorArea : Area2D
 var ground : Area2D
 
+var placed := false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	input_event.connect(drag)
@@ -26,9 +28,10 @@ func drag(_viewport, event : InputEvent, _idx) -> void:
 				position = last_position
 			else:
 				last_position = position
-				Inventory.AddFurniture(self)
-				Inventory.instances.remove_at(Inventory.instances.find(self))
-				print(self)
+				if !placed:
+					Inventory.AddFurniture(self)
+					Inventory.instances.remove_at(Inventory.instances.find(self))
+					placed = true
 				if (has_node("AudioStreamPlayer2D")):
 					get_node("AudioStreamPlayer2D").play()
 			

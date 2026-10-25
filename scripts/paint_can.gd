@@ -38,4 +38,7 @@ func drag(_viewport, event : InputEvent, _idx) -> void:
 			queue_free()
 			Turns.IncrementAction()
 			if (has_node("AudioStreamPlayer2D")):
-					get_node("AudioStreamPlayer2D").play()
+					var streamer : AudioStreamPlayer2D = get_node("AudioStreamPlayer2D")
+					streamer.play()
+					streamer.reparent(get_parent())
+					streamer.finished.connect(streamer.queue_free)
