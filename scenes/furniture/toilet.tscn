@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(75, 145)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdirl"]
+size = Vector2(75, 20)
+
 [node name="Toilet" type="Area2D" unique_id=118146050]
 script = ExtResource("1_gdirl")
 
@@ -18,3 +21,9 @@ shape = SubResource("RectangleShape2D_hk511")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=626109556]
 stream = ExtResource("2_gdirl")
+
+[node name="Ground" type="Area2D" parent="." unique_id=100060308]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1144838037]
+position = Vector2(0.5, 62)
+shape = SubResource("RectangleShape2D_gdirl")

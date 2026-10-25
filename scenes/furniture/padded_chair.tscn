@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(100, 145)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lejqs"]
+size = Vector2(101, 20)
+
 [node name="PaddedChair" type="Area2D" unique_id=2031021918]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1170248780]
@@ -13,3 +16,9 @@ texture = ExtResource("1_lejqs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1089814165]
 position = Vector2(5, 0)
 shape = SubResource("RectangleShape2D_hk511")
+
+[node name="Ground" type="Area2D" parent="." unique_id=90574781]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=481781754]
+position = Vector2(4.5, 62)
+shape = SubResource("RectangleShape2D_lejqs")

@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(145, 85)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yd8dh"]
+size = Vector2(145, 20)
+
 [node name="WoodenTable" type="Area2D" unique_id=1990066293]
 script = ExtResource("1_yd8dh")
 
@@ -15,3 +18,9 @@ texture = ExtResource("1_lgt2r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2059407678]
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_hk511")
+
+[node name="Ground" type="Area2D" parent="." unique_id=1714247778]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1194412648]
+position = Vector2(1, 45)
+shape = SubResource("RectangleShape2D_yd8dh")
