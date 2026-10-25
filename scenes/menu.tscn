@@ -1,5 +1,26 @@
 [gd_scene format=3 uid="uid://cpqvh1xbe64e4"]
 
+[sub_resource type="Gradient" id="Gradient_4h3mk"]
+colors = PackedColorArray(0.88235295, 0.6862745, 0.2627451, 1, 0.8464959, 0.9252249, 0.980679, 0.36078432)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x3h5n"]
+gradient = SubResource("Gradient_4h3mk")
+fill_from = Vector2(0.203125, 0.26171875)
+fill_to = Vector2(0.69140625, 0.6953125)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kiatt"]
+texture = SubResource("GradientTexture2D_x3h5n")
+
+[sub_resource type="Theme" id="Theme_upa4g"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_kiatt")
+
+[sub_resource type="Theme" id="Theme_l1n4c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4r8jj"]
+font_size = 150
+outline_size = 30
+outline_color = Color(0.02, 0.02, 0.02, 1)
+
 [node name="Control" type="Control" unique_id=448940960]
 layout_mode = 3
 anchors_preset = 15
@@ -15,3 +36,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_upa4g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1297116999]
+layout_mode = 2
+theme = SubResource("Theme_l1n4c")
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=3974639]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Room"
+label_settings = SubResource("LabelSettings_4r8jj")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=919604423]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 100
+text = "Start room"
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1353598368]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 75
+text = "Exit room"
