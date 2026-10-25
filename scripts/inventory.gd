@@ -1,4 +1,4 @@
-extends Game
+extends Node
 
 class_name Inventory
 

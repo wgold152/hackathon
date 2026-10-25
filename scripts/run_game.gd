@@ -1,4 +1,4 @@
-extends Node
+extends Turns
 
 class_name Game
 
