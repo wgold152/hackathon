@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uran1ujq2i3i" path="res://scripts/paint_can.gd" id="1_2yvqa"]
 [ext_resource type="Texture2D" uid="uid://dkwrjir0c5wqg" path="res://sprites/paint_lime.png" id="2_0njbq"]
+[ext_resource type="AudioStream" uid="uid://coti4vx07q2r3" path="res://audio/sound_effects/Paint.mp3" id="3_0njbq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4bll"]
 size = Vector2(91, 138)
@@ -18,3 +19,6 @@ texture = ExtResource("2_0njbq")
 visible = false
 position = Vector2(3, -3)
 shape = SubResource("RectangleShape2D_j4bll")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=235213909]
+stream = ExtResource("3_0njbq")

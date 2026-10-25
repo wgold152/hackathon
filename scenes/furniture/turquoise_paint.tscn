@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uran1ujq2i3i" path="res://scripts/paint_can.gd" id="1_4rorv"]
 [ext_resource type="Texture2D" uid="uid://cqbyhrati58d3" path="res://sprites/paint_turquoise.png" id="2_ilqaw"]
+[ext_resource type="AudioStream" uid="uid://coti4vx07q2r3" path="res://audio/sound_effects/Paint.mp3" id="3_ilqaw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxwvi"]
 size = Vector2(87, 117)
@@ -17,3 +18,6 @@ texture = ExtResource("2_ilqaw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1764163099]
 position = Vector2(4.5, 7.5)
 shape = SubResource("RectangleShape2D_gxwvi")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1108499325]
+stream = ExtResource("3_ilqaw")

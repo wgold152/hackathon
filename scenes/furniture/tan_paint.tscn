@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uran1ujq2i3i" path="res://scripts/paint_can.gd" id="1_h2nyj"]
 [ext_resource type="Texture2D" uid="uid://cx42mt8684cs8" path="res://sprites/paint_tan.png" id="2_xdopy"]
+[ext_resource type="AudioStream" uid="uid://coti4vx07q2r3" path="res://audio/sound_effects/Paint.mp3" id="3_xdopy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxwvi"]
 size = Vector2(91, 108)
@@ -13,6 +14,9 @@ colour = Color(1, 0.93333334, 0.81960785, 1)
 [node name="PaintTan" type="Sprite2D" parent="." unique_id=422968048]
 y_sort_enabled = true
 texture = ExtResource("2_xdopy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="PaintTan" unique_id=11107059]
+stream = ExtResource("3_xdopy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1581980537]
 position = Vector2(1.5, 9)
