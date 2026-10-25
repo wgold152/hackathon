@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cvirveu87fcqc"]
+
+[ext_resource type="Texture2D" uid="uid://b2finda4670gm" path="res://sprites/redbull.png" id="1_apqig"]
+[ext_resource type="AudioStream" uid="uid://d1bavfwycglxi" path="res://audio/sound_effects/Redbull.mp3" id="2_d66dl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxwvi"]
+size = Vector2(56, 134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4bll"]
+size = Vector2(52, 20)
+
+[node name="Node2D" type="Area2D" unique_id=917854244]
+
+[node name="Redbull" type="Sprite2D" parent="." unique_id=82093471]
+texture = ExtResource("1_apqig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538550631]
+position = Vector2(1, -4)
+shape = SubResource("RectangleShape2D_gxwvi")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2033801292]
+stream = ExtResource("2_d66dl")
+
+[node name="Ground" type="Area2D" parent="." unique_id=265459053]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=362202477]
+position = Vector2(1, 59)
+shape = SubResource("RectangleShape2D_j4bll")
