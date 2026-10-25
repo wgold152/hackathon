@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://rm0i2hsjt08v"]
+
+[ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_ev5e5"]
+[ext_resource type="Texture2D" uid="uid://dbu5ii62ukxcg" path="res://sprites/skeleton.png" id="2_ev5e5"]
+[ext_resource type="AudioStream" uid="uid://c6urwaetuxijq" path="res://audio/sound_effects/Dry bones.mp3" id="3_ev5e5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
+size = Vector2(86, 143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bo16"]
+size = Vector2(87, 20)
+
+[node name="HandVaccum" type="Area2D" unique_id=1121474194]
+script = ExtResource("1_ev5e5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=940353369]
+y_sort_enabled = true
+texture = ExtResource("2_ev5e5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=482136790]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_hk511")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1362693559]
+stream = ExtResource("3_ev5e5")
+volume_db = 24.0
+
+[node name="Ground" type="Area2D" parent="." unique_id=1748665629]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=945364504]
+position = Vector2(-0.5, 62)
+shape = SubResource("RectangleShape2D_2bo16")

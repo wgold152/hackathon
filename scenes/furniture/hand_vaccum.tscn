@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_tuh3q"]
 [ext_resource type="Texture2D" uid="uid://dx2xwifqo3jg7" path="res://sprites/hand_vaccum.png" id="2_tuh3q"]
-[ext_resource type="AudioStream" uid="uid://cictpmxhw51ax" path="res://audio/sound_effects/Glass table.mp3" id="3_tuh3q"]
+[ext_resource type="AudioStream" uid="uid://b8igde0xfxj43" path="res://audio/sound_effects/Vacuum.mp3" id="3_tuh3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(145, 120)
