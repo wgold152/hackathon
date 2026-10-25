@@ -27,6 +27,7 @@ func drag(_viewport, event : InputEvent, _idx) -> void:
 			else:
 				last_position = position
 				Inventory.AddFurniture(self)
+				print(self)
 				if (has_node("AudioStreamPlayer2D")):
 					get_node("AudioStreamPlayer2D").play()
 			
