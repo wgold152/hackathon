@@ -2,9 +2,9 @@ extends Node
 
 class_name Inventory
 
-var furnishings = []
-var inventory = []
-var furnitureStore = []
+static var furnishings = []
+static var inventory = []
+static var furnitureStore = []
 
 var path = 'res://scenes/furniture/'
 
@@ -24,7 +24,7 @@ func dir_contents(path):
 	else:
 		print("An error occurred when trying to access the path.")
 
-func PopulateInventory():
+static func PopulateInventory():
 	var temp
 	var i = 0
 	
@@ -40,12 +40,12 @@ func PopulateInventory():
 			inventory[i] = temp
 			i + 1
 
-func AddFurniture(furnishing):
+static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
-	Turns.action + 1
+	Turns.IncrementTurn()
 
-func PaintRoom(section, paint):
-	Turns.action + 1
+static func PaintRoom(section, paint):
+	Turns.IncrementTurn()
 
-func RemoveFurniture(furnishing):
+static func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))
