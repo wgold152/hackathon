@@ -1,8 +1,9 @@
 extends Node
 
 static var furnishings = []
-static var inventory = []
 static var furnitureStore = []
+static var inv = []
+static var instances = []
 
 var path = 'res://scenes/furniture/'
 
@@ -22,9 +23,10 @@ func DirContents(path):
 	else:
 		print("An error occurred when trying to access the path.")
 
-static func PopulateInventory():
+static func PopulateInventory() -> Array:
 	var temp
 	var i = 0
+	var inventory = []
 	
 	#reset inventory
 	inventory.clear()
@@ -38,43 +40,38 @@ static func PopulateInventory():
 			inventory[i] = temp
 			i = i + 1
 			print(str(temp) + "Added to inventory")
+			
+	return inventory
 
 func InstantiateItems(inventory):
-	var increment = 200
-	var basePositionx = 700
-	var basePositiony = 750
+	var xincrement = 211
+	var yincrement = 174
+	var basePositionx = 655
+	var basePositiony = 787
 	var inventoryVectors = [Vector2(basePositionx, basePositiony), 
-						Vector2(basePositionx+increment, basePositiony),
-						Vector2(basePositionx+increment, basePositiony),
-						Vector2(basePositionx+increment, basePositiony),
-						Vector2(basePositionx, basePositiony),
-						Vector2(basePositionx, basePositiony),
-						Vector2(basePositionx, basePositiony),
-						Vector2(basePositionx, basePositiony)]
+						Vector2(basePositionx+xincrement, basePositiony),
+						Vector2(basePositionx+(2*xincrement), basePositiony),
+						Vector2(basePositionx+(3*xincrement), basePositiony),
+						Vector2(basePositionx, basePositiony+yincrement),
+						Vector2(basePositionx+xincrement, basePositiony+yincrement),
+						Vector2(basePositionx+(2*xincrement), basePositiony+yincrement),
+						Vector2(basePositionx+(3*xincrement), basePositiony+yincrement)]
 	var count = 0
 	for x in inventory:
-		print(x)
 		var instance = x.instantiate()
 		add_child(instance)
-		print(inventoryVectors[count])
+		instances.append(instance)
 		instance.position = inventoryVectors[count]
 		count = count + 1
 
 static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
-	print(furnishings)
 	Turns.IncrementAction()
-
-static func PaintRoom(section, paint):
-	Turns.IncrementTurn()
 
 static func RemoveFurniture(furnishing):
 	furnishings.pop_at(furnishings.find(furnishing))
 	
 func _ready() -> void:
 	DirContents(path)
-	PopulateInventory()
-	print(inventory)
-	print("WAHHHH")
-	InstantiateItems(inventory)
-	print(furnitureStore)
+	inv = PopulateInventory()
+	InstantiateItems(inv)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bvttqji7eh20o"]
 
 [ext_resource type="Texture2D" uid="uid://box2w2adpl8u6" path="res://sprites/old_bed.png" id="1_7c0c8"]
+[ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_bsgsf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(145, 85)
@@ -9,6 +10,7 @@ size = Vector2(145, 85)
 size = Vector2(145, 20)
 
 [node name="Bed" type="Area2D" unique_id=851722151]
+script = ExtResource("1_bsgsf")
 
 [node name="OldBed" type="Sprite2D" parent="." unique_id=201900874]
 texture = ExtResource("1_7c0c8")

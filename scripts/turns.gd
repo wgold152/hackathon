@@ -14,12 +14,14 @@ static var action = 0
 
 static func IncrementAction():
 	action = action + 1
-	print(action)
+	print("action: " + str(action))
 	if action == MAX_ACTIONS: IncrementTurn()
 
 static func IncrementTurn():
 			curTurn = curTurn + 1
-			Inventory.PopulateInventory()
+			for x in Inventory.instances:
+				x.queue_free()
+			Inventory.InstantiateItems(Inventory.PopulateInventory())
 			print(curTurn)
 			
 			if curTurn == MAX_TURNS:
