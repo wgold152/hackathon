@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cvirveu87fcqc"]
+[gd_scene format=3 uid="uid://ca6lf8m5p5fyb"]
 
 [ext_resource type="Script" uid="uid://bphlf2pm3q8l8" path="res://scripts/furniture.gd" id="1_88oj2"]
 [ext_resource type="Texture2D" uid="uid://b2finda4670gm" path="res://sprites/redbull.png" id="2_diwv8"]

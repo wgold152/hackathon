@@ -39,8 +39,6 @@ static func PopulateInventory():
 		if not inventory.has(temp):
 			inventory[i] = temp
 			i = i + 1
-<<<<<<< Updated upstream
-=======
 			print(str(temp) + "Added to inventory")
 
 
@@ -50,7 +48,7 @@ func InstantiateItems(inventory):
 		print(x)
 		var instance = x.instantiate()
 		add_child(instance)
->>>>>>> Stashed changes
+
 
 static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
