@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dfqkydn7hdgn"]
+
+[ext_resource type="Script" uid="uid://uran1ujq2i3i" path="res://scripts/paint_can.gd" id="1_awpra"]
+[ext_resource type="Texture2D" uid="uid://dbjrgopr5xtgr" path="res://sprites/paint_rose.png" id="2_7v1qn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh236"]
+size = Vector2(91, 136)
+
+[node name="Rose paint" type="Area2D" unique_id=1580900398]
+script = ExtResource("1_awpra")
+colour = Color(1, 0.68235296, 0.8235294, 1)
+
+[node name="PaintRose" type="Sprite2D" parent="." unique_id=820264369]
+texture = ExtResource("2_7v1qn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1500975239]
+visible = false
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_vh236")

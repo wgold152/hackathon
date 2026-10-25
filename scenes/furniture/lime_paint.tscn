@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dlgs0mp6ekxtu"]
+
+[ext_resource type="Script" uid="uid://uran1ujq2i3i" path="res://scripts/paint_can.gd" id="1_2yvqa"]
+[ext_resource type="Texture2D" uid="uid://dkwrjir0c5wqg" path="res://sprites/paint_lime.png" id="2_0njbq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4bll"]
+size = Vector2(91, 138)
+
+[node name="Lime Paint" type="Area2D" unique_id=871539823]
+script = ExtResource("1_2yvqa")
+colour = Color(0.9019608, 1, 0.6901961, 1)
+
+[node name="PaintLime" type="Sprite2D" parent="." unique_id=786094315]
+texture = ExtResource("2_0njbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1776830991]
+visible = false
+position = Vector2(3, -3)
+shape = SubResource("RectangleShape2D_j4bll")
