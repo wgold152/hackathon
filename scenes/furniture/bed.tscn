@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(145, 85)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xqv3"]
+size = Vector2(145, 20)
+
 [node name="Bed" type="Area2D" unique_id=851722151]
 
 [node name="OldBed" type="Sprite2D" parent="." unique_id=201900874]
@@ -12,3 +15,9 @@ texture = ExtResource("1_7c0c8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850209902]
 shape = SubResource("RectangleShape2D_hk511")
+
+[node name="Ground" type="Area2D" parent="." unique_id=715659869]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1061345159]
+position = Vector2(1, 33)
+shape = SubResource("RectangleShape2D_4xqv3")

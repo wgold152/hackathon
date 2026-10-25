@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk511"]
 size = Vector2(145, 100)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj43k"]
+size = Vector2(145, 20)
+
 [node name="WoodenBed" type="Area2D" unique_id=395229060]
 script = ExtResource("1_mj43k")
 
@@ -15,3 +18,9 @@ texture = ExtResource("2_pvn1b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666651186]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_hk511")
+
+[node name="Ground" type="Area2D" parent="." unique_id=719831058]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1014479364]
+position = Vector2(1, 45)
+shape = SubResource("RectangleShape2D_mj43k")
