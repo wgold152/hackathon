@@ -40,17 +40,18 @@ static func PopulateInventory():
 			print(str(temp) + "Added to inventory")
 
 func InstantiateItems(inventory):
-	var increment = 200
-	var basePositionx = 700
-	var basePositiony = 750
+	var xincrement = 211
+	var yincrement = 174
+	var basePositionx = 655
+	var basePositiony = 787
 	var inventoryVectors = [Vector2(basePositionx, basePositiony), 
-						Vector2(basePositionx+increment, basePositiony),
-						Vector2(basePositionx+increment, basePositiony),
-						Vector2(basePositionx+increment, basePositiony),
-						Vector2(basePositionx, basePositiony),
-						Vector2(basePositionx, basePositiony),
-						Vector2(basePositionx, basePositiony),
-						Vector2(basePositionx, basePositiony)]
+						Vector2(basePositionx+xincrement, basePositiony),
+						Vector2(basePositionx+(2*xincrement), basePositiony),
+						Vector2(basePositionx+(3*xincrement), basePositiony),
+						Vector2(basePositionx, basePositiony+yincrement),
+						Vector2(basePositionx+xincrement, basePositiony+yincrement),
+						Vector2(basePositionx+(2*xincrement), basePositiony+yincrement),
+						Vector2(basePositionx+(3*xincrement), basePositiony+yincrement)]
 	var count = 0
 	for x in inventory:
 		print(x)
