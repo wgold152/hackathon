@@ -32,5 +32,6 @@ func drag(_viewport, event : InputEvent, _idx) -> void:
 				position = last_position
 				return
 			queue_free()
+			Turns.IncrementAction()
 			if (has_node("AudioStreamPlayer2D")):
 					get_node("AudioStreamPlayer2D").play()
