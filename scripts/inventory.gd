@@ -1,7 +1,5 @@
 extends Node
 
-class_name Inventory
-
 static var furnishings = []
 static var inventory = []
 static var furnitureStore = []
@@ -42,11 +40,25 @@ static func PopulateInventory():
 			print(str(temp) + "Added to inventory")
 
 func InstantiateItems(inventory):
-	print(inventory)
+	var increment = 200
+	var basePositionx = 700
+	var basePositiony = 750
+	var inventoryVectors = [Vector2(basePositionx, basePositiony), 
+						Vector2(basePositionx+increment, basePositiony),
+						Vector2(basePositionx+increment, basePositiony),
+						Vector2(basePositionx+increment, basePositiony),
+						Vector2(basePositionx, basePositiony),
+						Vector2(basePositionx, basePositiony),
+						Vector2(basePositionx, basePositiony),
+						Vector2(basePositionx, basePositiony)]
+	var count = 0
 	for x in inventory:
 		print(x)
 		var instance = x.instantiate()
 		add_child(instance)
+		print(inventoryVectors[count])
+		instance.position = inventoryVectors[count]
+		count = count + 1
 
 static func AddFurniture(furnishing):
 	furnishings.append(furnishing)
@@ -63,5 +75,6 @@ func _ready() -> void:
 	DirContents(path)
 	PopulateInventory()
 	print(inventory)
+	print("WAHHHH")
 	InstantiateItems(inventory)
 	print(furnitureStore)
